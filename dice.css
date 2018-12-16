@@ -239,7 +239,8 @@ input[type="text"]:focus {
     font-weight: bold;
 }
 
-@media only screen and (max-width: 425px) {
+
+/* @media only screen and (max-width: 425px) {
     .form {
         width: 100%;
         font-size: 15px;
@@ -252,5 +253,27 @@ input[type="text"]:focus {
     .p1,
     .p2 {
         display: none;
+    }
+} */
+
+@media (max-width:960px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    .menu {
+        display: none;
+    }
+    .container>div {
+        transform: none;
+        width: 100%;
+        margin: 0px;
+    }
+    .cont {
+        opacity: 1;
+    }
+    .diceimg {
+        display: none
     }
 }
