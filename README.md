@@ -1,2 +1,2 @@
-# Roll-Dice
-A game based on pure JavaScript
+# roll-dice
+This is a simple game

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dice.css">
+    <title>Roll the Dice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<script src="dice.js"></script>
+
+
+<body>
+    <div class="diceimg"><img src="img/rollin" alt=""> <br>
+        <p>Roll the dice</p>
+    </div>
+
+    <div class="container">
+
+        <div class="menu ins">
+            <p>Instructions</p>
+            <li> Each player can roll the dice as many times he want.</li>
+            <li>At each roll score will be added to current score.</li>
+            <li>Once the player presses switch button, the turn shifts to the other player and the score adds to total score.</li>
+            <li> One who reaches the EXACT target first, wins.<br> <br> But before the player switches if he rolls jokerface,the current score becomes 0 and turn automatically shifts to other player</li>
+            </ul>
+        </div>
+        <div class="cont">
+            <div class="title">Roll the Dice</div>
+            <div class="player p1">
+                <div class="pnam" id="p1">PLAYER 1</div>
+                <div class="hed total" id="total-p1">Total Score
+                    <div class="score total-p1">0</div>
+                </div>
+                <div class="hed curr">Current Score
+                    <div class="score current-p1" id="current-p1">0</div>
+                </div>
+            </div>
+
+            <div class="dice">
+                <p class="hed new" onclick="location.reload()"><i class="fas fa-plus-circle"></i>New Game</p>
+                <img width="80px" height="80px" id="dice" src="img/dice-1.png" alt="">
+                <p class="result"></p>
+                <p class="dis-target">Target:</p>
+                <p class="roll" onclick="change_dice()"><i class="fas fa-redo"></i>Roll Dice</p>
+                <p class="hold" style="font-size:25px;" onclick="calcTotal(document.querySelector('.target').value)"><i class="fas fa-arrows-alt-h"></i>Switch </p>
+            </div>
+            <div class="player p2">
+                <div class="pnam" id="p2">PLAYER 2</div>
+
+                <div class="hed total">Total Score
+                    <div class="score total-p2" id="total-p2">0</div>
+                </div>
+                <div class="hed curr">Current Score
+                    <div class="score current-p2" id="current-p2">0</div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="act-form">
+                    <form id="player_form">
+                        <p id="err"></p>
+                        <input id="player1" type="text" placeholder="Player 1" class="player1" name="player1" onblur="getElementById('p1').innerHTML=this.value" required> <br>
+                        <input type="text" placeholder="Player 2" class="player2" name="player2" onblur="getElementById('p2').innerHTML=this.value" required> <br>
+                        <input type="text" placeholder="Set Target" class="target" onchange="isNum(this.value)" required><br>
+                        <input type="button" value="Start" onclick="init()">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div id="new-game" onclick="show()">New Game</div>
+            <div id="ins" onclick="showIns()">Instructions</div>
+            <div class="keyboard">Key Board Contols
+                <div class="data">
+                    <img class="keyboard icon1" src="img/spacebar.png" alt=""> <br>Rolldice
+                    <hr> <img class="keyboard icon2" src="img/enter.png" alt=""><br> Switch
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

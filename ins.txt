@@ -1,0 +1,4 @@
+<!-- <div class="instructions">
+                <p>Instructions</p> Each player can roll the dice as many times he want.At each roll score will be added to current score.Once the player switches the turn shifts to the other player and the score adds to total score.One who reaches the target
+                first wins.But before the player switches if he rolls number one,the current score becomes 0 and turn automatically shifts to other player
+            </div>  -->
