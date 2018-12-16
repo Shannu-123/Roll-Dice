@@ -257,6 +257,9 @@ input[type="text"]:focus {
 } */
 
 @media (max-width:920px) {
+    body{
+        font-size:14px;
+    }
     .container {
         display: flex;
         flex-direction: column-reverse;
