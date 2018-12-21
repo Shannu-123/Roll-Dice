@@ -1,0 +1,34 @@
+<script>
+    function display(x) {
+        switch (x) {
+            case "click":
+                document.getElementById('demo').innerHTML = "First Text";
+                break;
+            case "click1":
+                document.getElementById('demo').innerHTML = "Second Text";
+                break;
+            case "click2":
+                document.getElementById('demo').innerHTML = "Third Text";
+                break;
+
+            default:
+                break;
+        }
+    }
+</script>
+<style>
+    .cont {
+        background: #22588f;
+        color: white;
+        font-size: 18px;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <input type="button" value="click" onclick="display(this.value)">
+    <input type="button" value="click1" onclick="display(this.value)">
+    <input type="button" value="click2" onclick="display(this.value)">
+    <div class="cont">
+        <p id="demo"></p>
+    </div>
