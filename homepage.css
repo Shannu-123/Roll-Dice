@@ -35,10 +35,11 @@ a{
 .scroll{
     background-color: gold;
     color:var(--heddings-color);
+    transition: background-color 0.7s;
 }
 .main-section{
     text-align:center;
-    padding:10em 4em;
+    padding:10em 2em;
     line-height: 0.5cm;
     font-family:var(--main-font);
     color:white;
