@@ -239,9 +239,6 @@ input[type="text"]:focus {
     font-weight: bold;
 }
 
-<<<<<<< HEAD
-@media (max-width:960px) {
-=======
 
 /* @media only screen and (max-width: 425px) {
     .form {
@@ -263,7 +260,6 @@ input[type="text"]:focus {
     body{
         font-size:14px;
     }
->>>>>>> ffcf9ece832c6730dbb954f1e3c7427ba8ba2292
     .container {
         display: flex;
         flex-direction: column-reverse;
